@@ -4,10 +4,9 @@ This isn't really my dotfiles but has some rough notes that hopefully helps some
 
 ## Apps
 
-- magnet
-- unsplash
-- prompt pure
-- dato
+- magnet - arrange windows quickly
+- unsplash - desktop changer
+- dato - date app
 - use spotlight search mapped to command-space
 - hyper for terminal app
 
@@ -45,7 +44,10 @@ trash-cli # https://github.com/sindresorhus/trash-cli
 
 ### some interesting git and shell aliases
 
+using https://hub.github.com/
+
 ```sh
+alias git='hub'
 gc # git checkout
 gc - # checkout last used branch
 function gc {
@@ -55,14 +57,14 @@ function gc {
 }
 
 alias gl='git pull'
-alias gp='git push -u'
+alias gp='git push --set-upstream'
+alias gam='git commit --amend'
 
 # git log showing some branches
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr) - %C(yellow)%d%Creset" --abbrev-commit '
 
 # ascii tree
 alias tree-ascii='tree -L 2 -d --prune -I node_modules'
-gam -- git --amend
 
 # list of branches
 alias gbs="git for-each-ref --sort=committerdate refs/heads/ --format='%(color: cyan)%(committerdate:short) %(color: white)%(refname:short)'" # --no-merge
